@@ -68,9 +68,18 @@ public class ClienteEP {
 
         return ResponseEntity.ok(auditado);
 
-
-
     }
 
+
+    @GetMapping("/boom")
+    public String boommmm(){
+         String s = new String();
+         for ( long i =0l ; i <1000000000000000900l ; i++) {
+                s += s+s+s+"jdipoasjpoidjoiajspoidjpoasjdpoijasoipdjpoiasj";
+         }
+
+        return s;
+
+    }
 
 }
