@@ -12,7 +12,7 @@ public class UserRevisionListener implements RevisionListener , Serializable {
 
     public static final  String USERNAME = "Palazzio";
 
-
+    private int forceCodeSmell = 3;
 
     @Override
     public void newRevision(Object revisionEntity) {
