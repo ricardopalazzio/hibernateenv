@@ -1,8 +1,6 @@
 package ninja.tuxtech.envers.model;
 
 import org.hibernate.envers.RevisionListener;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -12,9 +10,9 @@ import java.io.Serializable;
 
 public class UserRevisionListener implements RevisionListener , Serializable {
 
-    public final static String USERNAME = "Palazzio";
+    public static final  String USERNAME = "Palazzio";
 
-
+    private int forceCodeSmell = 3;
 
     @Override
     public void newRevision(Object revisionEntity) {
